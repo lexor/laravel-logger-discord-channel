@@ -45,7 +45,7 @@ class DiscordHandler extends AbstractProcessingHandler
      */
     protected function write(array $record)
     {
-        $formatter = new LineFormatter('[%level_name%]: %message% - %datetime%', null, true, true);
+        $formatter = new LineFormatter('[%level_name%]: %datetime% - %message% - %context.username% (%context.id%)', null, true, true);
         $formatter->includeStacktraces();
         $content = $formatter->format($record);
 

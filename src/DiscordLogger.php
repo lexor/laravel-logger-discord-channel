@@ -1,6 +1,6 @@
 <?php
 
-namespace LEXOR\LoggerDiscordChannel;
+namespace Lexor\LoggerDiscordChannel;
 
 use Monolog\Logger;
 

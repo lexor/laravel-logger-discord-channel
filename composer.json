@@ -1,5 +1,5 @@
 {
-  "name": "kabbouchi/laravel-logger-discord-channel",
+  "name": "lexor/laravel-logger-discord-channel",
   "description": "A Discord based Monolog driver for Laravel",
   "keywords": [
     "laravel",
@@ -11,6 +11,10 @@
     {
       "name": "Georges KABBOUCHI",
       "email": "georges.kabbouchi@gmail.com"
+    },
+    {
+      "name": "Emre DEĞER",
+      "email": "emredeger16@gmail.com"
     }
   ],
   "require": {
@@ -23,7 +27,7 @@
   },
   "autoload": {
     "psr-4": {
-      "KABBOUCHI\\LoggerDiscordChannel\\": "src/"
+      "LEXOR\\LoggerDiscordChannel\\": "src/"
     }
   },
   "config": {

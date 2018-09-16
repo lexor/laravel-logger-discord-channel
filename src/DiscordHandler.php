@@ -1,6 +1,6 @@
 <?php
 
-namespace KABBOUCHI\LoggerDiscordChannel;
+namespace LEXOR\LoggerDiscordChannel;
 
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\RequestOptions;
@@ -45,7 +45,7 @@ class DiscordHandler extends AbstractProcessingHandler
      */
     protected function write(array $record)
     {
-        $formatter = new LineFormatter(null, null, true, true);
+        $formatter = new LineFormatter('[%level_name%]: %message% - %datetime%', null, true, true);
         $formatter->includeStacktraces();
         $content = $formatter->format($record);
 
@@ -53,7 +53,7 @@ class DiscordHandler extends AbstractProcessingHandler
         $log = [
             'embeds' => [
                 [
-                    'title' => 'Log from ' . $this->name,
+                    'title' => 'Log: ' . $this->name,
                     // Use CSS for the formatter, as it provides the most distinct colouring.
                     'description' => "```css\n" . substr($content, 0, 2030). '```',
                     'color' => 0xE74C3C,

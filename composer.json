@@ -29,10 +29,5 @@
     "psr-4": {
       "Lexor\\LoggerDiscordChannel\\": "src/"
     }
-  },
-  "config": {
-    "sort-packages": true
-  },
-  "prefer-stable": true,
-  "minimum-stability": "dev"
+  }
 }
